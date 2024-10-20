@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Positioning the logo at the top left corner */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px;
+            height: auto;
+        }
+
+        /* Profile button with profile picture silhouette */
+        .profile-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            width: 60px; /* Increased size */
+            height: 60px; /* Increased size */
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Adding profile picture silhouette */
+        .profile-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Body and layout styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .split-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #ffcc00;
+            position: relative;
+        }
+
+        /* Enlarged form container */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 60px; /* Increased padding */
+            border-radius: 15px; /* Slightly larger border radius */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+            max-width: 700px; /* Increased width */
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Buttons for the delivery actions */
+        .buttons {
+            display: flex;
+            flex-direction: column; /* Arrange buttons vertically */
+            align-items: center; /* Center buttons horizontally */
+            margin-top: 30px; /* Adjusted margin */
+        }
+
+        .action-btn {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px; /* Increased padding */
+            margin: 10px 0; /* Vertical margin for spacing between buttons */
+            border-radius: 30px; /* Slightly larger border radius */
+            width: 100%;
+            max-width: 300px; /* Set a maximum width for buttons */
+            border: none;
+            cursor: pointer;
+            font-size: 18px; /* Larger font size */
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="split-screen">
+        <!-- Company Logo in the top left corner -->
+        <img src="Entrix Logo.png" alt="Company Logo" class="logo">
+
+        <!-- Profile Button in the top-right corner with profile silhouette -->
+        <button class="profile-btn" onclick="goToProfile()">
+            <img src="userIcon.png" alt="Profile Icon">
+        </button>
+
+        <!-- Centralized Form and Action Buttons Container -->
+        <div class="form-container">
+            <h1>Welcome to the Transport Portal</h1>
+            <p class="tagline">Streamlining your transport experience</p>
+
+            <div class="buttons">
+                <!-- Buttons for various actions -->
+                <button class="action-btn" onclick="sendDelivery()">Send Delivery</button>
+                <button class="action-btn" onclick="deliveryReceived()">Delivery Received</button>
+                <button class="action-btn" onclick="deliveryStatus()">Delivery Status</button>
+              
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions to handle button actions
+        function goToProfile() {
+            // Redirect to profile page (you can change the URL as needed)
+            window.location.href = 'account-profile.html';
+        }
+
+        function sendDelivery() {
+            // Redirect to send delivery page (you can change the URL as needed)
+            window.location.href = 'vehicle.html';
+        }
+
+        function deliveryReceived() {
+            // Redirect to send delivery page (you can change the URL as needed)
+            window.location.href = 'receive.html';
+        }
+
+        function deliveryStatus() {
+            // Redirect to send delivery page (you can change the URL as needed)
+            window.location.href = 'status.html';
+        }
+
+    </script>
+</body>
+</html>

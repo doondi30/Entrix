@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Status - Your Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #ffcc00;
+        }
+
+        .home-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #f0b800;
+        }
+
+        .status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            position: relative;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #1e1e1e;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .status:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .step {
+            flex: 1;
+            padding: 10px;
+            position: relative;
+            text-align: center;
+        }
+
+        .step:not(:last-child):after {
+            content: '→'; /* Arrow symbol */
+            position: absolute;
+            top: 50%;
+            right: -30px; /* Adjust the space between the step and the arrow */
+            font-size: 30px; /* Adjust the size of the arrow */
+            color: #ffcc00; /* Arrow color */
+            transition: color 0.3s;
+        }
+
+        .step:not(:last-child):hover:after {
+            color: #f0b800; /* Change arrow color on hover */
+        }
+
+        .step h2 {
+            font-size: 24px;
+            margin: 10px 0;
+            transition: color 0.3s;
+        }
+
+        .step.active h2 {
+            color: #ffcc00;
+            transform: translateY(-5px);
+        }
+
+        .step.completed h2 {
+            color: #00bfff;
+        }
+
+        .icon {
+            font-size: 50px;
+            transition: transform 0.3s, color 0.3s;
+            display: inline-block; /* Needed for the 3D effect */
+        }
+
+        .step.active .icon {
+            color: #ffcc00;
+        }
+
+        .step.completed .icon {
+            color: #00bfff;
+        }
+
+        .icon:hover {
+            transform: scale(1.2) rotateY(15deg); /* 3D effect on hover */
+        }
+
+        .icon:active {
+            transform: scale(1.1) rotateY(-15deg); /* Slightly smaller when clicked */
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .step h2 {
+                font-size: 20px;
+            }
+
+            .icon {
+                font-size: 40px;
+            }
+
+            .step:not(:last-child):after {
+                right: -20px; /* Adjust arrow position on smaller screens */
+                font-size: 20px; /* Adjust arrow size on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Your Transport Status</h1>
+        <div class="status">
+            <div class="step completed">
+                <div class="icon">✅</div>
+                <h2>Entry <br>Checked In</h2>
+            </div>
+            <div class="step active">
+                <div class="icon">⏳</div>
+                <h2>Waiting for Transport</h2>
+            </div>
+            <div class="step active">
+                <div class="icon">🚚</div>
+                <h2>In Transit</h2>
+            </div>
+            <div class="step completed">
+                <div class="icon">🏁</div>
+                <h2>Exit Completed</h2>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Thank you for using our transport management system!<br><br> We will notify you once the transport is complete.</p>
+            <a href="index.html" class="home-button">Home</a>
+        </div>
+    </div>
+</body>
+
+</html>

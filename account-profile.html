@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Portal - Account Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            background-color: #ffcc00; /* Bright yellow background */
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-header .avatar img {
+            width: 100%;
+            height: auto;
+        }
+
+        .profile-header h1 {
+            font-size: 30px;
+            font-weight: 600;
+            margin: 0;
+            color: #333;
+        }
+
+        .profile-header p {
+            font-size: 18px;
+            font-weight: 400;
+            color: #666;
+            margin: 5px 0 0;
+        }
+
+        .profile-details {
+            margin-top: 30px;
+        }
+
+        .profile-details h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffcc00; /* Yellow border */
+            padding-bottom: 10px;
+        }
+
+        .profile-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .profile-details th,
+        .profile-details td {
+            padding: 12px;
+            text-align: left;
+            font-weight: 400;
+        }
+
+        .profile-details th {
+            background-color: #f9f9f9;
+            font-weight: 600;
+        }
+
+        .profile-details tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .edit-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .edit-btn:hover {
+            background-color: #f0b800;
+            transform: scale(1.05);
+        }
+
+        .back-btn {
+            display: block;
+            margin: 40px auto 0; /* Centered button with margin at the top */
+            background-color: #ffcc00;
+            color: #333;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #f0b800;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-container {
+            display: none; /* Hidden by default */
+            margin-top: 30px;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #f0b800;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-container">
+        <!-- Profile Header with Avatar -->
+        <div class="profile-header">
+            <div class="avatar">
+                <img src="userIcon.png" alt="User Icon"> <!-- User icon image -->
+            </div>
+            <div>
+                <h1>John Doe</h1>
+                <p>Transport Manager</p>
+            </div>
+        </div>
+
+        <!-- Profile Details Section -->
+        <div class="profile-details">
+            <h2>Account Information</h2>
+            <table>
+                <tr>
+                    <th>Organization Name:</th>
+                    <td>Global Logistics Inc.</td>
+                </tr>
+                <tr>
+                    <th>Type of Organization:</th>
+                    <td>Logistics and Supply Chain Management</td>
+                </tr>
+                <tr>
+                    <th>Delivery Preferences:</th>
+                    <td>Retail and Consumer Goods</td>
+                </tr>
+                <tr>
+                    <th>Company License:</th>
+                    <td>1234-5678-ABCD</td>
+                </tr>
+                <tr>
+                    <th>Contact Email:</th>
+                    <td>john.doe@example.com</td>
+                </tr>
+                <tr>
+                    <th>Phone Number:</th>
+                    <td>+1 555-1234</td>
+                </tr>
+            </table>
+
+            <!-- Edit Profile Button -->
+            <button class="edit-btn" onclick="toggleForm()">Edit Profile</button>
+        </div>
+
+        <!-- Form for Editing Profile -->
+        <div class="form-container" id="formContainer">
+            <h2>Edit Account Information</h2>
+            <form action="submission.html" method="get">
+                <label for="orgName">Organization Name:</label>
+                <input type="text" id="orgName" name="orgName" required>
+
+                <label for="orgType">Type of Organization:</label>
+                <input type="text" id="orgType" name="orgType" required>
+
+                <label for="deliveryPreferences">Delivery Preferences:</label>
+                <input type="text" id="deliveryPreferences" name="deliveryPreferences" required>
+
+                <label for="companyLicense">Company License:</label>
+                <input type="text" id="companyLicense" name="companyLicense" required>
+
+                <label for="contactEmail">Contact Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Centered Home Button -->
+        <form action="index.html" method="get">
+            <button type="submit" class="back-btn">HOME</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const formContainer = document.getElementById('formContainer');
+            formContainer.style.display = formContainer.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

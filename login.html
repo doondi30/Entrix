@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Portal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+        }
+
+        .split-screen {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left, .right {
+            flex: 1;
+        }
+
+        /* Left Section - Wallpaper */
+        .left {
+            background-image: url('wallpaper.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Right Section - Login/Signup Form */
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffcc00;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .form {
+            display: none;
+        }
+
+        .active-form {
+            display: block;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="split-screen">
+        <!-- Left Section -->
+        <div class="left"></div>
+
+        <!-- Right Section -->
+        <div class="right">
+            <div class="form-container">
+                <h1 class="text-center">Welcome to the Transport Portal</h1>
+                <p class="text-center">Streamlining your transport experience</p>
+                <div class="text-center mb-3">
+                    <button id="loginBtn" class="btn btn-primary mx-2">Login</button>
+                    <button id="signupBtn" class="btn btn-secondary mx-2">Sign Up</button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="loginForm" class="form active-form">
+                    <h2>Login</h2>
+                    <form id="loginFormElement">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="btn submit-btn">Login</button>
+                    </form>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div id="signupForm" class="form">
+                    <h2>Sign Up</h2>
+                    <form id="signupFormElement">
+                        <div class="form-group">
+                            <label for="companyName">Company Name:</label>
+                            <input type="text" class="form-control" id="companyName" name="companyName" required placeholder="Enter your company name">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailSignup">Email:</label>
+                            <input type="email" class="form-control" id="emailSignup" name="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordSignup">Password:</label>
+                            <input type="password" class="form-control" id="passwordSignup" name="password" required placeholder="Enter your password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password:</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                        </div>
+                        <button type="submit" class="btn submit-btn">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            document.getElementById('loginForm').classList.add('active-form');
+            document.getElementById('signupForm').classList.remove('active-form');
+        });
+
+        document.getElementById('signupBtn').addEventListener('click', function() {
+            document.getElementById('signupForm').classList.add('active-form');
+            document.getElementById('loginForm').classList.remove('active-form');
+        });
+
+        // Handle Sign Up form submission
+        document.getElementById('signupFormElement').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Perform sign-up logic (validation, sending data to the server)
+            // Then redirect to transportPortal.html
+            window.location.href = 'transportPortal.html';
+        });
+
+        // Handle Login form submission
+        document.getElementById('loginFormElement').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Perform login logic (validation, authentication)
+            // Then redirect to transportPortal.html
+            window.location.href = 'transportPortal.html';
+        });
+    </script>
+</body>
+</html>

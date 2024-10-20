@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Submission Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #000000; /* Black background */
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: #fefefe;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            max-width: 90%;
+            width: 80%;
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #f5df00; /* Yellow heading */
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .upload-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+            gap: 20px; /* Spacing between boxes */
+        }
+
+        .upload-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+            background-color: #f5df00; /* Yellow background */
+            border: 2px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            position: relative;
+            color: black;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .upload-box:hover {
+            background-color: #ffcc00; /* Darker yellow on hover */
+            transform: scale(1.05); /* Slight scale-up on hover */
+        }
+
+        .upload-box input[type="file"] {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            position: absolute;
+        }
+
+
+        button.back-btn {
+            background-color: #f5df00; /* Yellow button */
+            color: black;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 30px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button.back-btn:hover {
+            background-color: #ffcc00; /* Darker yellow on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1 style="color: blue;">Document Submission</h1>
+        <form id="documentForm">
+            <div class="upload-container">
+                <!-- Row 1 -->
+                <div class="upload-box">
+                    <span>Upload Vehicle RC</span>
+                    <input type="file" id="vehicleRC" name="vehicleRC" required>
+                </div>
+
+                <div class="upload-box">
+                    <span>Upload Insurance</span>
+                    <input type="file" id="insurance" name="insurance" required>
+                </div>
+
+                <div class="upload-box">
+                    <span>Upload Fitness Certificates</span>
+                    <input type="file" id="fitnessCert" name="fitnessCert" required>
+                </div>
+
+                <div class="upload-box">
+                    <span>Upload Driver's License</span>
+                    <input type="file" id="driversLicense" name="driversLicense" required>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="upload-box">
+                    <span>Upload Permits</span>
+                    <input type="file" id="permits" name="permits" required>
+                </div>
+
+                <div class="upload-box">
+                    <span>Upload Pollution Clearance</span>
+                    <input type="file" id="pollutionClearance" name="pollutionClearance" required>
+                </div>
+
+                <div class="upload-box">
+                    <span>Upload Customer Requisition Slip</span>
+                    <input type="file" id="customerSlip" name="customerSlip" required>
+                </div>
+
+                <div class="upload-box">
+                    <span>Other Important Docs</span>
+                    <input type="file" id="otherDocs" name="otherDocs">
+                </div>
+            </div>
+
+    <button type="submit" class="back-btn">Submit Documents</button>
+    <!-- Back to Vehicle button -->
+    <button class="back-btn" id="backBtn">Back to Vehicle</button>
+</form>
+</div>
+
+<script>
+// Getting the vehicle number from URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const vehicleNumber = urlParams.get('vehicle');
+const vehicleNumberText = document.getElementById('vehicleNumberText');
+
+// Display the vehicle number on the page if it exists
+if (vehicleNumber) {
+    vehicleNumberText.innerHTML = `<h2>Vehicle Number: ${vehicleNumber}</h2>`;
+}
+
+// Redirect to vehicle.html when 'Back to Vehicle' is clicked
+const backBtn = document.getElementById('backBtn');
+backBtn.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent form submission or default link behavior
+    window.location.href = 'vehicle.html'; // Redirect to vehicle.html
+});
+</script>
+
+</body>
+</html>

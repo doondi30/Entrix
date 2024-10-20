@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Portal - Submission Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(255, 255, 63, 0.695);
+        }
+
+        .confirmation-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .confirmation-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .confirmation-container h1 {
+            font-weight: 700;
+            font-size: 26px;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-container p {
+            font-weight: 400;
+            font-size: 18px;
+            color: #4a5568;
+            margin-bottom: 30px;
+        }
+
+        .confirmation-container .success-icon {
+            font-size: 60px;
+            color: #28a745;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .confirmation-container .success-icon:hover {
+            transform: rotate(360deg);
+        }
+
+        .confirmation-container .back-btn {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .confirmation-container .back-btn:hover {
+            background-color: #f0b800;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Adding 3D hover effect to the whole container */
+        .confirmation-container:active {
+            transform: scale(0.98);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="confirmation-container">
+        <!-- Success Icon with 3D Hover Effect -->
+        <div class="success-icon">&#10004;</div>
+
+        <!-- Confirmation Message -->
+        <h1>Submission Successful!</h1>
+        <p><b>Thank you for providing your organization information. <br> <br> Your details have been successfully submitted.</b></p>
+
+        <!-- Back to Dashboard Button -->
+        <form action="index.html" method="get">
+            <button type="submit" class="back-btn">HOME</button>
+        </form>
+    </div>
+</body>
+
+</html>

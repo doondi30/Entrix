@@ -3,20 +3,12 @@
 Welcome to the **Entrix: Entry and Exit Road Transport Management System**, a comprehensive platform designed to streamline the road transportation process with advanced security features like blockchain, biometrics, and multi-device functionality.
 
 ## Table of Contents 📖
-- [Overview 🚚](#overview-)
 - [Features ✨](#features-)
 - [Document Submission Requirements 📑](#document-submission-requirements-)
 - [How to Use 🛠️](#how-to-use-)
 - [Technologies Used ⚙️](#technologies-used-)
 - [Screenshots 🖼️](#screenshots-)
 - [Links 📌](#links-)
-
-## Overview 🚚
-
-**Entrix** allows users to efficiently manage their transport and delivery operations.
-- Users can **submit documents**, **send delivery**, and **track vehicle status** using advanced features like **Blockchain Tamper-proof Logs**, **RFID**, and **ANPR Biometrics**. 
-
-This system enhances operational efficiency and security while providing a seamless user experience with its multi-device functionality.
 
 ## Features ✨
 
@@ -65,6 +57,7 @@ Here’s a look at the **Entrix Transport Management System** interface:
 
 ## Links 📌
 
+- Project Video Presentation: https://drive.google.com/file/d/1APGAONODj_fw9MQ1ob3i5DUa8ccYW2Xn/view?usp=sharing
 - Live Site URL:  https://doondigangadhar30.github.io/Entrix/
 - Project Repository: https://github.com/your-github/Entrix
 - Let's Connect: [LinkedIn](https://www.linkedin.com/in/doondi)

@@ -12,23 +12,23 @@ Welcome to the **Entrix: Entry and Exit Road Transport Management System**, a co
 
 ## Features ✨
 
-- **Document Pre-verification Security**: Ensures all documents are pre-verified before allowing entry and exit.
-- **Blockchain Tamper-proof Logs**: Secure your transportation data with tamper-proof blockchain records.
-- **RFID and ANPR Biometrics**: Enable automatic vehicle recognition and verification for entry and exit.
-- **Multi-Device Functionality**: Accessible across different devices to manage transportation on the go.
-- **Delivery Status Tracking**: Real-time updates on the status of your deliveries.
+- **Document Pre-verification Security**
+- **Blockchain Tamper-proof Logs**
+- **RFID and ANPR Biometrics**
+- **Multi-Device Functionality**
+- **Delivery Status Tracking**
   
 ## Document Submission Requirements 📑
 
 To complete the vehicle verification process, the following documents are required:
-- **Vehicle RC**: Upload the vehicle’s registration certificate.
-- **Insurance**: Submit a valid insurance document.
-- **Fitness Certificate**: Upload the fitness certificate for the vehicle.
-- **Driver's License**: Provide the driver’s valid license.
-- **Permits**: Submit any necessary vehicle permits.
-- **Pollution Clearance**: Provide the pollution control certificate.
-- **Customer Requisition Slip**: Upload the customer requisition slip for the delivery.
-- **Other Important Documents**: Any additional relevant documents that may be required.
+- **Vehicle RC**
+- **Insurance**
+- **Fitness Certificate**
+- **Driver's License**
+- **Permits**
+- **Pollution Clearance**
+- **Customer Requisition Slip**
+- **Other Important Documents**
 
 ## How to Use 🛠️
 

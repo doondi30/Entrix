@@ -2,13 +2,15 @@
 
 Welcome to the **Entrix: Entry and Exit Road Transport Management System**, a comprehensive platform designed to streamline the road transportation process with advanced security features like blockchain, biometrics, and multi-device functionality.
 
-## Table of Contents 📖
-- [Features ✨](#features-)
-- [Document Submission Requirements 📑](#document-submission-requirements-)
-- [How to Use 🛠️](#how-to-use-)
-- [Technologies Used ⚙️](#technologies-used-)
-- [Screenshots 🖼️](#screenshots-)
-- [Links 📌](#links-)
+## Table of Contributors 📖
+| Name                | Role                       |
+|---------------------|---------------------------|
+| [<img src="https://github.com/doondigangadhar30.png" width="30"> R Doondi Gangadhar](https://github.com/doondigangadhar30) | Frontend Developer |
+| K Hrudayesh Reddy| Quality Assurance Tester |
+| R Sanjay       | Project Manager |
+| [<img src="https://github.com/Geethasri16.png" width="30"> P Geethasri](https://github.com/Geethasri16)       | UI/UX Design Lead       |
+| P Pavankumar       | Backend Development     |
+| K Gnaneswar Rao| Marketing Lead  |
 
 ## Features ✨
 

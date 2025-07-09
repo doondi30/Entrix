@@ -60,7 +60,7 @@ Here’s a look at the **Entrix Transport Management System** interface:
 ## Links 📌
 
 - Project Video Presentation: https://drive.google.com/file/d/1APGAONODj_fw9MQ1ob3i5DUa8ccYW2Xn/view?usp=sharing
-- Live Site URL:  https://doondigangadhar30.github.io/Entrix/
+- Live Site URL:  https://doondi30.github.io/Entrix/
 - Project Repository: https://github.com/doondigangadhar30/Entrix?tab=readme-ov-file
 - Let's Connect: [LinkedIn](https://www.linkedin.com/in/doondi)
 

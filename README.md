@@ -5,7 +5,7 @@ Welcome to the **Entrix: Entry and Exit Road Transport Management System**, a co
 ## Table of Contributors 📖
 | Name                | Role                       |
 |---------------------|---------------------------|
-| [<img src="https://github.com/doondigangadhar30.png" width="30"> R Doondi Gangadhar](https://github.com/doondigangadhar30) | Frontend Developer |
+| [<img src="https://github.com/doondi30.png" width="30"> R Doondi Gangadhar](https://github.com/doondi30) | Frontend Developer |
 | K Hrudayesh Reddy| Quality Assurance Tester |
 | [<img src="https://github.com/sanjayramavarapu.png" width="30"> R Sanjay ](https://github.com/sanjayramavarapu)        | Project Manager |
 | [<img src="https://github.com/Geethasri16.png" width="30"> P Geethasri](https://github.com/Geethasri16)       | UI/UX Design Lead       |
